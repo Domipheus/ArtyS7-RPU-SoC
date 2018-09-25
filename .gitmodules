@@ -1,0 +1,3 @@
+[submodule "RPU"]
+	path = RPU
+	url = https://github.com/Domipheus/RPU.git
