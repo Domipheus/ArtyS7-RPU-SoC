@@ -1,0 +1,1 @@
+rpu_top.bit is a prebuilt bitfile for Arty S7-50 Rev. B boards. It contains the RPU RISC-V core and SoC implementation for SD card bootloader and HDMI out at 720p60 text mode.
