@@ -1,0 +1,33 @@
+{
+   ExpandedHierarchyInLayout: "",
+   guistr: "# # String gsaved with Nlview 6.8.5  2018-01-30 bk=1.4354 VDI=40 GEI=35 GUI=JA:1.6 non-TLS
+#  -string -flagsOSRD
+preplace port clkb_0 -pg 1 -y 0 -defaultsOSRD
+preplace port clka_0 -pg 1 -y -140 -defaultsOSRD
+preplace port enb_0 -pg 1 -y 60 -defaultsOSRD
+preplace port ena_0 -pg 1 -y -80 -defaultsOSRD
+preplace portBus addrb_0 -pg 1 -y -20 -defaultsOSRD
+preplace portBus addra_0 -pg 1 -y -160 -defaultsOSRD
+preplace portBus doutb_0 -pg 1 -y 40 -defaultsOSRD
+preplace portBus dina_0 -pg 1 -y -120 -defaultsOSRD
+preplace portBus web_0 -pg 1 -y 80 -defaultsOSRD
+preplace portBus dinb_0 -pg 1 -y 20 -defaultsOSRD
+preplace portBus douta_0 -pg 1 -y -100 -defaultsOSRD
+preplace portBus wea_0 -pg 1 -y -60 -defaultsOSRD
+preplace inst blk_mem_gen_0 -pg 1 -lvl 1 -y -50 -defaultsOSRD
+preplace netloc dinb_0_1 1 0 1 N
+preplace netloc dina_0_1 1 0 1 N
+preplace netloc clka_0_1 1 0 1 N
+preplace netloc ena_0_1 1 0 1 N
+preplace netloc wea_0_1 1 0 1 N
+preplace netloc enb_0_1 1 0 1 N
+preplace netloc blk_mem_gen_0_douta 1 0 2 20 -240 230J
+preplace netloc blk_mem_gen_0_doutb 1 0 2 20 140 230J
+preplace netloc addra_0_1 1 0 1 N
+preplace netloc addrb_0_1 1 0 1 N
+preplace netloc web_0_1 1 0 1 N
+preplace netloc clkb_0_1 1 0 1 N
+levelinfo -pg 1 0 130 260 -top -310 -bot 170
+",
+}
+

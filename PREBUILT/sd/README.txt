@@ -1,1 +1,1 @@
-BOOTCODE is a memory test app. Place it on an SD card formatted FAT32. The BOOTCODE file must be one of the first files in the FAT.
+BOOTCODE is a elf loader app. Place it on an SD card formatted FAT32. The BOOTCODE file must be one of the first files in the FAT.

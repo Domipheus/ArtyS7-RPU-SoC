@@ -74,28 +74,28 @@ begin
 		O => clk_buffered
 	);
 
-	BUFG_pclock : BUFG port map 
-	( 
-	  I => clock_pixel_unbuffered,  
-	  O => clock_pixel
-	);
+--	BUFG_pclock : BUFG port map 
+--	( 
+--	  I => clock_pixel_unbuffered,  
+--  O => clock_pixel
+--	);
 
-	BUFG_pclockx5 : BUFG port map 
-	( 
-	  I => clock_x5pixel_unbuffered,  
-	  O => clock_x5pixel
-	);
+--	BUFG_pclockx5 : BUFG port map 
+--	( 
+--	  I => clock_x5pixel_unbuffered,  
+--	  O => clock_x5pixel
+--	);
 
-	BUFG_pclockx5_180 : BUFG port map 
-	( 
-	  I => clock_x5pixelinv_unbuffered,  
-	  O => clock_x5pixelinv
-	);
+--	BUFG_pclockx5_180 : BUFG port map 
+--	( 
+--	  I => clock_x5pixelinv_unbuffered,  
+--	  O => clock_x5pixelinv
+--	);
 	
    O_buff_clk <= clk_buffered;
-   O_buff_clkpixel <= clock_pixel;
-   O_buff_clk5xpixel <= clock_x5pixel;
-   O_buff_clk5xpixelinv <= clock_x5pixelinv;
+   O_buff_clkpixel <= clock_pixel_unbuffered;
+   O_buff_clk5xpixel <= clock_x5pixel_unbuffered;
+   O_buff_clk5xpixelinv <= clock_x5pixelinv_unbuffered;
 	
 end Behavioral;
 

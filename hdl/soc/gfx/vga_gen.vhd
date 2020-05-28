@@ -1,7 +1,7 @@
 --
 -- Module modified by Colin "domipheus" Riley, original header below.
 -- Populates a fifo which is used to generate a prefetch set of signals if
--- requiuired.
+-- required.
 --
 ----------------------------------------------------------------------------------
 -- Engineer:       Mike Field <hamster@snap.net.nz>
