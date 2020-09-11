@@ -3,8 +3,8 @@
 // Tool Version: Vivado v.2018.1 (win64) Build 2188600 Wed Apr  4 18:40:38 MDT 2018
 // Date        : Tue Sep 25 12:55:29 2018
 // Host        : rainbowdash running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode synth_stub
-//               C:/dev/RPU/ArtyS7_RPU_SoC_test/ArtyS7_RPU_SoC.srcs/sources_1/bd/BRAM_64KB/ip/BRAM_64KB_blk_mem_gen_0_0/BRAM_64KB_blk_mem_gen_0_0_stub.v
+// Command     : write_verilog -force -mode synth_stub -rename_top BRAM_64KB_blk_mem_gen_0_0 -prefix
+//               BRAM_64KB_blk_mem_gen_0_0_ BRAM_64KB_blk_mem_gen_0_0_stub.v
 // Design      : BRAM_64KB_blk_mem_gen_0_0
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7s50csga324-2

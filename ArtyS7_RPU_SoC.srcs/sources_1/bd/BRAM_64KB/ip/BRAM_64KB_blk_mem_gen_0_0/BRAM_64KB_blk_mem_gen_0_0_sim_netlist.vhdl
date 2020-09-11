@@ -3,8 +3,8 @@
 -- Tool Version: Vivado v.2018.1 (win64) Build 2188600 Wed Apr  4 18:40:38 MDT 2018
 -- Date        : Tue Sep 25 12:55:29 2018
 -- Host        : rainbowdash running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim
---               C:/dev/RPU/ArtyS7_RPU_SoC_test/ArtyS7_RPU_SoC.srcs/sources_1/bd/BRAM_64KB/ip/BRAM_64KB_blk_mem_gen_0_0/BRAM_64KB_blk_mem_gen_0_0_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top BRAM_64KB_blk_mem_gen_0_0 -prefix
+--               BRAM_64KB_blk_mem_gen_0_0_ BRAM_64KB_blk_mem_gen_0_0_sim_netlist.vhdl
 -- Design      : BRAM_64KB_blk_mem_gen_0_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -37,8 +37,6 @@ entity BRAM_64KB_blk_mem_gen_0_0_blk_mem_gen_mux is
     \DEVICE_7SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_12\ : in STD_LOGIC_VECTOR ( 7 downto 0 );
     \DEVICE_7SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_13\ : in STD_LOGIC_VECTOR ( 7 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of BRAM_64KB_blk_mem_gen_0_0_blk_mem_gen_mux : entity is "blk_mem_gen_mux";
 end BRAM_64KB_blk_mem_gen_0_0_blk_mem_gen_mux;
 
 architecture STRUCTURE of BRAM_64KB_blk_mem_gen_0_0_blk_mem_gen_mux is
@@ -1026,8 +1024,6 @@ entity BRAM_64KB_blk_mem_gen_0_0_blk_mem_gen_prim_wrapper_init is
     wea : in STD_LOGIC_VECTOR ( 0 to 0 );
     web : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of BRAM_64KB_blk_mem_gen_0_0_blk_mem_gen_prim_wrapper_init : entity is "blk_mem_gen_prim_wrapper_init";
 end BRAM_64KB_blk_mem_gen_0_0_blk_mem_gen_prim_wrapper_init;
 
 architecture STRUCTURE of BRAM_64KB_blk_mem_gen_0_0_blk_mem_gen_prim_wrapper_init is
@@ -5466,8 +5462,6 @@ entity BRAM_64KB_blk_mem_gen_0_0_blk_mem_gen_prim_width is
     wea : in STD_LOGIC_VECTOR ( 0 to 0 );
     web : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of BRAM_64KB_blk_mem_gen_0_0_blk_mem_gen_prim_width : entity is "blk_mem_gen_prim_width";
 end BRAM_64KB_blk_mem_gen_0_0_blk_mem_gen_prim_width;
 
 architecture STRUCTURE of BRAM_64KB_blk_mem_gen_0_0_blk_mem_gen_prim_width is
@@ -6138,8 +6132,6 @@ entity BRAM_64KB_blk_mem_gen_0_0_blk_mem_gen_generic_cstr is
     ena : in STD_LOGIC;
     enb : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of BRAM_64KB_blk_mem_gen_0_0_blk_mem_gen_generic_cstr : entity is "blk_mem_gen_generic_cstr";
 end BRAM_64KB_blk_mem_gen_0_0_blk_mem_gen_generic_cstr;
 
 architecture STRUCTURE of BRAM_64KB_blk_mem_gen_0_0_blk_mem_gen_generic_cstr is
@@ -7128,8 +7120,6 @@ entity BRAM_64KB_blk_mem_gen_0_0_blk_mem_gen_top is
     ena : in STD_LOGIC;
     enb : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of BRAM_64KB_blk_mem_gen_0_0_blk_mem_gen_top : entity is "blk_mem_gen_top";
 end BRAM_64KB_blk_mem_gen_0_0_blk_mem_gen_top;
 
 architecture STRUCTURE of BRAM_64KB_blk_mem_gen_0_0_blk_mem_gen_top is
@@ -7169,8 +7159,6 @@ entity BRAM_64KB_blk_mem_gen_0_0_blk_mem_gen_v8_4_1_synth is
     ena : in STD_LOGIC;
     enb : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of BRAM_64KB_blk_mem_gen_0_0_blk_mem_gen_v8_4_1_synth : entity is "blk_mem_gen_v8_4_1_synth";
 end BRAM_64KB_blk_mem_gen_0_0_blk_mem_gen_v8_4_1_synth;
 
 architecture STRUCTURE of BRAM_64KB_blk_mem_gen_0_0_blk_mem_gen_v8_4_1_synth is
@@ -7407,8 +7395,6 @@ entity BRAM_64KB_blk_mem_gen_0_0_blk_mem_gen_v8_4_1 is
   attribute C_WRITE_WIDTH_B of BRAM_64KB_blk_mem_gen_0_0_blk_mem_gen_v8_4_1 : entity is 32;
   attribute C_XDEVICEFAMILY : string;
   attribute C_XDEVICEFAMILY of BRAM_64KB_blk_mem_gen_0_0_blk_mem_gen_v8_4_1 : entity is "spartan7";
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of BRAM_64KB_blk_mem_gen_0_0_blk_mem_gen_v8_4_1 : entity is "blk_mem_gen_v8_4_1";
   attribute downgradeipidentifiedwarnings : string;
   attribute downgradeipidentifiedwarnings of BRAM_64KB_blk_mem_gen_0_0_blk_mem_gen_v8_4_1 : entity is "yes";
 end BRAM_64KB_blk_mem_gen_0_0_blk_mem_gen_v8_4_1;
