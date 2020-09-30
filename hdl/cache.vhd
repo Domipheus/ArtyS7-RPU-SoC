@@ -169,27 +169,41 @@ begin
                             end if;
 
                         elsif I_CMD = CMD_WRITEINVAL then
-                            var_tag_found := '0';
-                            -- write is occuring to I_ADDR
-                            -- if I_ADDR is in the cache, and it is a 32b write, update the line. else invalidate.
+                            -- **** ISSUE ****
+                            -- FIXME: There is an issue with write-through randomly failing riscv-compliance tests in
+                            --    a seemingly random way. It's not actually random - just requires a specific set of
+                            --    circumstances to arrise with DDR3 writes and then reads of results in the compliance
+                            --    test runner. In the mean time, this feature has been disabled
+                            
+                            -- Simply invalidate any lines which hold data which is being written to
                             for I in 0 to (CACHE_DEPTH - 1) loop
                                 if tags(I).addr = I_ADDR(31 downto 5) then
-                                    if I_WRITESIZE = "10" then
-                                        var_tag_found_i := I;
-                                        var_tag_found := '1';
-                                    else
-                                        tags(I).valid <= '0';
-                                        S_nextTag <= I; -- set the next line to use as this one, it's invalid anyway
-                                    end if;
+                                    tags(I).valid <= '0';
+                                    S_nextTag <= I; -- set the next line to use as this one, it's invalid anyway
                                 end if;
                             end loop;
-
-                            if (var_tag_found = '1') then
-                                S_REQ_TAG_ID <= var_tag_found_i;
-                                state <= STATE_WT_WRITE;
-                            else
-                                state <= STATE_COMPLETE;
-                            end if;
+                            state <= STATE_COMPLETE;
+--                            var_tag_found := '0';
+--                            -- write is occuring to I_ADDR
+--                            -- if I_ADDR is in the cache, and it is a 32b write, update the line. else invalidate.
+--                            for I in 0 to (CACHE_DEPTH - 1) loop
+--                                if tags(I).addr = I_ADDR(31 downto 5) then
+--                                    if I_WRITESIZE = "10" then
+--                                        var_tag_found_i := I;
+--                                        var_tag_found := '1';
+--                                    else
+--                                        tags(I).valid <= '0';
+--                                        S_nextTag <= I; -- set the next line to use as this one, it's invalid anyway
+--                                    end if;
+--                                end if;
+--                            end loop;
+--
+--                            if (var_tag_found = '1') then
+--                                S_REQ_TAG_ID <= var_tag_found_i;
+--                                state <= STATE_WT_WRITE;
+--                            else
+--                                state <= STATE_COMPLETE;
+--                            end if;
 
                         elsif I_CMD = CMD_ALLINVAL then
                             for I in 0 to (CACHE_DEPTH - 1) loop
